@@ -1,5 +1,12 @@
 const express = require('express')
 
-const app=express();
 
-app.listen(process.env.port || 4000, () => {console.log(' napis ')});
+//set up express app
+const app = express();
+
+app.get('/',function(){
+    console.log('GET request');
+});
+
+//listen for request
+app.listen(process.env.port || 4000, () => {console.log('Nasłuchuj serwerze ')});
