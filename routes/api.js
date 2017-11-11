@@ -1,5 +1,15 @@
 const express = require('express');
 const router = express.Router();
+const Accesssories = require('../models/accessoriesSchema');
+const Guitars = require('../models/guitarSchema');
+
+//add guitar to database
+router.post('/guitars', (req, res, next) => {
+    const guitar = req.body;
+    Guitars.create(guitar).then((guitar) => {
+        res.status(201).send(guitar);
+    }).catch(err => { console.log(err.message) });
+});
 
 router.get('/api/musicWorld',function(req,res){
     res.send({type: 'GET'})
