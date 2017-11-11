@@ -1,7 +1,9 @@
 const express = require('express');
-
+const routes=require('./routes/api');
 //set up express app
 const app = express();
+
+app.use('/api',require('./routes/api'));
 
 app.get('/api',function(req,res){
     console.log('GET request');
