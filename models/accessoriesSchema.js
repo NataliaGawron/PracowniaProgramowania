@@ -4,6 +4,10 @@ const Schema = mongoose.Schema;
 // Create a Schema and a Model - Accessories
 
 const AccessoriesSchema = new Schema({
+    id_products: {
+        type: Schema.Types.ObjectId,
+        required: [true, 'ID_products field is required']
+    },
     type: {
         type: String,
         required: [true, 'Type accessories is required']
@@ -21,9 +25,9 @@ const AccessoriesSchema = new Schema({
         required: [true, 'Color accessories is required']
     },
     price: {
-        price: Float,
+        price: String,
         required: [true, 'Price accessories is required']
-    }  
+    }
 });
 
 const Accessories = mongoose.model('accessories', AccessoriesSchema);

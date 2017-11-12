@@ -4,6 +4,10 @@ const Schema = mongoose.Schema;
 // Create a Schema and a Model - Guitar
 
 const GuitarSchema = new Schema({
+    id_products: {
+        type: Schema.Types.ObjectId,
+        required: [true, 'ID_products field is required']
+    },
     type: {
         type: String,
         required: [true, 'Type guitar is required']
@@ -21,9 +25,9 @@ const GuitarSchema = new Schema({
         required: [true, 'Color guitar is required']
     },
     price: {
-        price: Float,
+        price: String,
         required: [true, 'Price guitar is required']
-    }  
+    }
 });
 
 const Guitars = mongoose.model('guitar', GuitarSchema);
