@@ -3,33 +3,33 @@ const Schema = mongoose.Schema;
 
 // Create a Schema and a Model - Guitar
 
-const GuitarSchema = new Schema({
-    id_products: {
-        type: Schema.Types.ObjectId,
-        required: [true, 'ID_products field is required']
+const GuitarsSchema = new Schema({
+    producer: {
+        type: String,
+        required: [true, 'Producer guitar is required']
     },
     type: {
         type: String,
         required: [true, 'Type guitar is required']
     },
     name: {
-        name: String,
+        type: String,
         required: [true, 'Name guitar is required']
     },
     model: {
-        model: String,
+        type: String,
         required: [true, 'Model guitar is required']   
     },
     colour: {
-        colour: String,
+        type: String,
         required: [true, 'Color guitar is required']
     },
     price: {
-        price: String,
+        type: String,
         required: [true, 'Price guitar is required']
     }
 });
 
-const Guitars = mongoose.model('guitar', GuitarSchema);
+const Guitars = mongoose.model('guitar', GuitarsSchema);
 
 module.exports = Guitars;
