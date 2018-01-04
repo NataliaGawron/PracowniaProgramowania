@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 // Create a Schema and a Model - Accessories
 
 const AccessoriesSchema = new Schema({
-    id_products: {
+    producer: {
         type: Schema.Types.ObjectId,
         required: [true, 'ID accessories is required']
     },
@@ -25,7 +25,7 @@ const AccessoriesSchema = new Schema({
         required: [true, 'Color accessories is required']
     },
     price: {
-        type: String,
+        type: Number,
         required: [true, 'Price accessories is required']
     }
 });

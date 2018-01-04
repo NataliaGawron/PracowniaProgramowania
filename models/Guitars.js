@@ -12,10 +12,6 @@ const GuitarsSchema = new Schema({
         type: String,
         required: [true, 'Type guitar is required']
     },
-    name: {
-        type: String,
-        required: [true, 'Name guitar is required']
-    },
     model: {
         type: String,
         required: [true, 'Model guitar is required']   
@@ -25,7 +21,7 @@ const GuitarsSchema = new Schema({
         required: [true, 'Color guitar is required']
     },
     price: {
-        type: String,
+        type: Number,
         required: [true, 'Price guitar is required']
     }
 });
