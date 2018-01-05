@@ -1,9 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const Guitars = require("../models/Guitars");
-//const Accessories = require('../models/Accessories');
-
-//const Accessories = require('../models/Accessories');
 
 ///////add guitar to database//////////
 //ctr K + ctr C  <-- ctr K + ctr U
