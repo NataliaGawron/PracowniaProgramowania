@@ -6,7 +6,7 @@ const routing = require("./routes/api");
 //////set up express app
 const app = express();
 const port = 4000;
-const path = require("path");
+//const path = require("path");
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.json());
@@ -22,6 +22,12 @@ app.use("/api", routing);
 
 app.get("*", function(req, res) {
 	res.sendFile(path.resolve(__dirname, "public", "index.html"));
+});
+
+///////////// error handling middleware//////////
+app.use(function(err, req, res, next) {
+	console.log(err); // to see properties of message in our console
+	res.status(422).send({ error: err.message });
 });
 
 ///////////listen for request//////////

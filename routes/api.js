@@ -23,26 +23,46 @@ router.get("/guitars", function(req, res) {
 			res.send(guitars);
 		})
 		.catch(err => {
-			res.status(404).json({ reason: "Not found" });
+			res.status(404).json({
+				reason: "Not found",
+			});
 		});
 });
 
 //delete a guitar from the db//
-router.delete("/guitars/:id", (req, res) => {
-	res.send({ type: "DELETE" });
+router.delete("/guitars/:id", function(req, res, next) {
+	Guitars.findByIdAndRemove({ _id: req.params.id })
+		.then(function(guitar) {
+			res.send(guitar);
+		})
+		.catch(next);
 });
-//udpate
-router.patch("/guitars/:id", function(req, res) {
-	res.send({ type: "PATCH" });
+
+// update a guitar in the db
+router.put("/guitars/:id", function(req, res, next) {
+	Guitars.findByIdAndUpdate({ _id: req.params.id }, req.body)
+		.then(function() {
+			Guitars.findOne({ _id: req.params.id }).then(function(guitar) {
+				res.send(guitar);
+			});
+		})
+		.catch(next);
 });
-//zaimplementuj PATCH I DELETE /guitars/:id
+
+// get a guitar in the db
 router.get("/guitars/:id", function(req, res) {
 	const guitar_id = req.params.id;
-	Guitars.find({ _id: guitar_id })
+	Guitars.find({
+		_id: guitar_id,
+	})
 		.then(guitar => {
 			res.send(guitar);
 		})
 		.catch(err => console.log(err));
 });
+
+/*router.patch("/guitars/:id", function(req, res) {
+	res.send({ type: "PATCH" });
+});*/
 
 module.exports = router;
