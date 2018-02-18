@@ -1,0 +1,165 @@
+{
+	"guitars": [{
+		"_id": "5a1834a2a7ca481d0037fc59",
+		"producer": "Epiphone",
+		"type": "akustyczna",
+		"model": "Epiphone EJ-200",
+		"colour": "natural",
+		"price": 1200,
+		"__v": 0
+	}, {
+		"_id": "5a4f931457ce853b7a73c715",
+		"producer": " Fender ",
+		"type": "akustyczna",
+		"model": "Squier SA105",
+		"colour": "black",
+		"price": 471
+	}, {
+		"_id": "5a4fe36957ce853b7a73d502",
+		"producer": "Yamaha",
+		"type": "akustyczna",
+		"model": "F-310 ",
+		"colour": "natural",
+		"price": 634
+	}, {
+		"_id": "5a4fe4cc57ce853b7a73d560",
+		"producer": "Fendrer",
+		"type": "akustyczna",
+		"model": "CD 60 ",
+		"colour": "black",
+		"price": 710
+	}, {
+		"_id": "5a4fe4ea57ce853b7a73d564",
+		"producer": "Ibanez",
+		"type": "akustyczna",
+		"model": "V50NJP ",
+		"colour": "black",
+		"price": 398
+	}, {
+		"_id": "5a4fe50f57ce853b7a73d56e",
+		"producer": "Lag",
+		"type": "akustyczna",
+		"model": "GLA-T100-DCE",
+		"colour": "black",
+		"price": 1575
+	}, {
+		"_id": "5a4fe52657ce853b7a73d570",
+		"producer": "Epiphone",
+		"type": "akustyczna",
+		"model": "DR100 EB",
+		"colour": "black",
+		"price": 501
+	}, {
+		"_id": "5a4fe53957ce853b7a73d572",
+		"producer": "Fender",
+		"type": "akustyczna",
+		"model": "CD-140 SCE ",
+		"colour": "black",
+		"price": 1380
+	}, {
+		"_id": "5a4fe54c57ce853b7a73d57c",
+		"producer": "Ibanez",
+		"type": "akustyczna",
+		"model": "PF15",
+		"colour": "black",
+		"price": 722
+	}, {
+		"_id": "5a4fe55b57ce853b7a73d57e",
+		"producer": "Stagg",
+		"type": "akustyczna",
+		"model": "SW201",
+		"colour": "black",
+		"price": 481
+	}, {
+		"_id": "5a85ba2775e2ef73941dcbaf",
+		"producer": "Gibson",
+		"type": "elektryczna",
+		"model": "Les Paul Faded T 2017",
+		"colour": "black",
+		"price": 2345
+	}, {
+		"_id": "5a85ba3175e2ef73941dcbb3",
+		"producer": "Ibanez",
+		"type": "elektryczna",
+		"model": "Paul Stanley Signature PS120SP",
+		"colour": "black",
+		"price": 5321
+	}, {
+		"_id": "5a85ba4175e2ef73941dcbb8",
+		"producer": "Schecter Hellraiser",
+		"type": "elektryczna",
+		"model": "C-1",
+		"colour": "black",
+		"price": 2543
+	}, {
+		"_id": "5a85bacc75e2ef73941dcbe2",
+		"producer": "Epiphone",
+		"type": "elektryczna",
+		"model": "Les Paul Standard",
+		"colour": "black",
+		"price": 4321
+	}, {
+		"_id": "5a85c20f75e2ef73941dcca0",
+		"producer": "Ibanez",
+		"type": "elektryczna",
+		"model": "RG450DX",
+		"colour": "black",
+		"price": 4254
+	}, {
+		"_id": "5a85c21c75e2ef73941dcca5",
+		"producer": "Gibson",
+		"type": "elektryczna",
+		"model": "ES-339",
+		"colour": "black",
+		"price": 4175
+	}, {
+		"_id": "5a85c22775e2ef73941dcca9",
+		"producer": "Yamaha",
+		"type": "elektryczna",
+		"model": "Pacifica Series PAC112V",
+		"colour": "black",
+		"price": 3253
+	}, {
+		"_id": "5a85c23275e2ef73941dccb1",
+		"producer": "Squier",
+		"type": "elektryczna",
+		"model": "Vintage Modified ’51",
+		"colour": "black",
+		"price": 3562
+	}, {
+		"_id": "5a85c23b75e2ef73941dccb5",
+		"producer": "Epiphone",
+		"type": "elektryczna",
+		"model": "G-310 SG",
+		"colour": "black",
+		"price": 3426
+	}, {
+		"_id": "5a85c24475e2ef73941dccb9",
+		"producer": "Fender",
+		"type": "elektryczna",
+		"model": "Mexican Standard Telecaster",
+		"colour": "black",
+		"price": 4732
+	}, {
+		"_id": "5a85c24e75e2ef73941dccbd",
+		"producer": "Fender",
+		"type": "elektryczna",
+		"model": "Mexican Standard Stratocaster",
+		"colour": "black",
+		"price": 4932
+	}, {
+		"_id": "5a85c25675e2ef73941dccc0",
+		"producer": "ESP",
+		"type": "elektryczna",
+		"model": "E-II Eclipse",
+		"colour": "black",
+		"price": 3792
+	}, {
+		"_id": "5a85c26075e2ef73941dccc4",
+		"producer": "Gibson",
+		"type": "elektryczna",
+		"model": "Flying V Pro 2016 T",
+		"colour": "black",
+		"price": 4784
+	}]
+}
