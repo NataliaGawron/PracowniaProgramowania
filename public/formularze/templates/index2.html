@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" />
+    <title>Sounds</title>
+    <!-- <link th:if="${mode == 'development'}" rel="stylesheet" href="../static/bootstrap.css" th:href="@{/bootstrap.css}" /> -->
+    <!-- <link th:if="${mode == 'production'}" rel="stylesheet" href="../static/bootstrap.min.css" th:href="@{/bootstrap.min.css}" /> -->
+    <script type="text/javascript" src="../static/angular.min.js" th:src="@{/angular.min.js}"></script>
+    <script type="text/javascript" src="../static/app/app.module.js" th:src="@{/app/app.module.js}"></script>
+    <script type="text/javascript" src="../static/app/sounds.controller.js" th:src="@{/app/sounds.controller.js}"></script>
+	
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body  ng-app="app" ng-controller="GuitarsController as vm">
+    <header class="bs-docs-nav navbar navbar-static-top  navbar-inverse" id="top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button aria-controls="bs-navbar" class="collapsed navbar-toggle" data-target=#bs-navbar data-toggle="collapse" type="button">
+					<span class=sr-only>Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../../index.html" class="navbar-brand">Home</a>
+			</div>
+			<nav class="collapse navbar-collapse" id="bs-navbar">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="../../index1.html">Wyświetl gitary</a>
+					</li>
+					<li>
+						<a href="../../index3.html">Wyświetl nagłośnienie</a>
+					</li>
+					<li>
+						<a class="active" href="../../index2.html">Wyświetl akcesoria</a>
+					</li>
+					<li>
+					 <li>
+						 <a href="index.html">Dodaj gitary</a> 
+					 </li>
+					<li class="active">
+						<a href="index2.html">Dodaj nagłośnienie</a>
+					</li>
+					<li>
+						<a href="index3.html">Dodaj akcesoria</a>
+					</li>
+					<li>
+						<a href="formularze/templates/index.html"></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-8">
+
+            <!-- show all sounds or only these deleted -->
+            <!-- <div class="btn-group" role="group"> -->
+                <!-- <button ng-click="vm.getAll()" name="button" class="btn btn-default">All</button> -->
+                <!-- <!-- <button ng-click="vm.getDeleted()" name="button" class="btn btn-default">Deleted</button> --> 
+            <!-- </div> -->
+
+            <!-- table for sounds -->
+            <table class="table">
+                <thead>
+                <tr>
+					<th>Nazwa</th>
+                    <th>Producent</th>
+                    <th>Model</th>
+                    <th>Kolor</th>
+					<th>Cena</th>
+                    <th style="width: 90px"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="sound in vm.sounds">
+					<td>{{sound.name}}</td>
+                    <td>{{sound.producer}}</td>
+                    <td>{{sound.model}}</td>
+                    <td>{{sound.colour}}</td>
+					<td>{{sound.price}}</td>
+                    <td>
+                        <button class="btn btn-danger" ng-click="vm.deleteUser(sound.id)">Delete</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <div>
+        <p>Add Sound</p>
+		<p>Name:</p>
+        <input name="text" ng-model="name" id="inputTyp"/>
+        <p>Producent:</p>
+        <input name="text" ng-model="producer" id="inputProducent"/>
+        <p>Model:</p>
+        <input name="text" ng-model="model" id="inputModel"/>
+        <p>Kolor:</p>
+        <input name="text" ng-model="colour" id="inputKolor"/>
+		<p>Cena:</p>
+        <input name="text" ng-model="price" id="inputCena"/>
+        <button ng-click="vm.addUser()">Add</button>
+    </div>
+</div>
+
+<footer class="footer" style="bottom:0; background-color: #f5f5f5;">
+    <div class="container">
+        <p th:text="${datetime}" class="text-muted">Page was rendered today.</p>
+    </div>
+</footer>
+
+<script>
+    console.log("Site loaded");
+</script>
+
+</body>
+</html>

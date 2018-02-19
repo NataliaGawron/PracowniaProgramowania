@@ -1,3 +1,16 @@
+.FontStyle {
+    font-family: 'Lobster', cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Pacifico', cursive;
+}
+
+.FontStyleNav {
+    font-family: 'Lobster', cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Pacifico', cursive;
+    color: grey;
+}
+
 h1 {
         font-family: sans-serif;
         text-transform: uppercase;
@@ -15,6 +28,3 @@ h1 {
         background: #444;
         cursor: default;
     }
-body{
-	padding: 50px;
-}

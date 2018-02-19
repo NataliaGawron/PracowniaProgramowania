@@ -141,6 +141,90 @@
 		"colour": "black",
 		"price": 4732
 	}, {
+	"producer" : "Epiphone",
+	"type" : "akustyczna",
+	"model" : "EJ-200",
+	"colour" : "natural",
+	"price" : 1200
+	
+	},{
+	"producer" : " Fender ",
+	"type" : "akustyczna",
+	"model" : "Squier SA105",
+	"colour" : "black",
+	"price" : 471
+	
+	},{
+	"producer" : "Yamaha",
+	"type" : "akustyczna",
+	"model" : "F-310 ",
+	"colour" : "natural",
+	"price" : 634
+	
+	},{
+	"producer" : "Fendrer",
+	"type" : "akustyczna",
+	"model" : "CD 60 ",
+	"colour" : "black",
+	"price" : 710
+	
+	},{
+	"producer" : "Ibanez",
+	"type" : "akustyczna",
+	"model" : "V50NJP ",
+	"colour" : "black",
+	"price" : 398
+	
+	},{
+	"producer" : "LAG",
+	"type" : "akustyczna",
+	"model" : "TJ-320",
+	"colour" : "naturalny",
+	"price" : 873
+	
+	},{
+	"producer" : "Lag",
+	"type" : "akustyczna",
+	"model" : "GLA-T100-DCE",
+	"colour" : "black",
+	"price" : 1575
+	
+	},{
+	"producer" : "Epiphone",
+	"type" : "akustyczna",
+	"model" : "DR100 EB",
+	"colour" : "black",
+	"price" : 501
+	
+	},{
+	"producer" : "Fender",
+	"type" : "akustyczna",
+	"model" : "CD-140 SCE ",
+	"colour" : "black",
+	"price" : 1380
+	
+	},{
+	"producer" : "Ibanez",
+	"type" : "akustyczna",
+	"model" : "PF15",
+	"colour" : "black",
+	"price" : 722
+	
+	},{
+	"producer" : "Stagg",
+	"type" : "akustyczna",
+	"model" : "SW201",
+	"colour" : "black",
+	"price" : 481
+	
+	},{
+	"producer" : "Fruch",
+	"type" : "akustyczna",
+	"model" : "D40 CM Cutaway",
+	"colour" : "natural",
+	"price" : 2549
+	
+	}, {
 		"_id": "5a85c24e75e2ef73941dccbd",
 		"producer": "Fender",
 		"type": "elektryczna",

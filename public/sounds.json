@@ -1,0 +1,25 @@
+{
+	"sounds": [
+		{
+			"name": "Kolumna",
+			"producer": "Dynacord",
+			"model": "AXM 12A",
+			"colour": "black",
+			"price": 4299
+		},
+		{
+			"name": "Kolumna",
+			"producer": "Alto Professional",
+			"model": "TX12",
+			"colour": "black",
+			"price": 899
+		},
+		{
+			"name": "Kolumna",
+			"producer": "Fender FORTIS",
+			"model": "F12BT",
+			"colour": "black",
+			"price": 3192
+		}
+	]
+}

@@ -1,50 +1,116 @@
-<!doctype html>
-<html class="no-js" lang="pl">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Guitar App</title>
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" />
+    <title>Guitarr App</title>
 	<link rel="Shortcut icon" href="gitara.ico" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <link th:if="${mode == 'development'}" rel="stylesheet" href="../static/bootstrap.css" th:href="@{/bootstrap.css}" /> -->
+    <!-- <link th:if="${mode == 'production'}" rel="stylesheet" href="../static/bootstrap.min.css" th:href="@{/bootstrap.min.css}" /> -->
+ 
+	
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body  ng-app="app" ng-controller="AccessoriesMusicController as vm">
+    <header class="bs-docs-nav navbar navbar-static-top  navbar-inverse" id="top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button aria-controls="bs-navbar" class="collapsed navbar-toggle" data-target=#bs-navbar data-toggle="collapse" type="button">
+					<span class=sr-only>Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../../index.html" class="navbar-brand">Home</a>
+			</div>
+			<nav class="collapse navbar-collapse" id="bs-navbar">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="index1.html">Wyświetl gitary</a>
+					</li>
+					<li>
+						<a href="index3.html">Wyświetl nagłośnienie</a>
+					</li>
+					<li>
+						<a class="active" href="index2.html">Wyświetl akcesoria</a>
+					</li>
+					<li>
+					 <li>
+						 <a href="index.html">Dodaj gitary</a> 
+					 </li>
+					 <li> 
+						 <a href="index2.html">Dodaj nagłośnienie</a> 
+					 </li> 
+					<li class="active">
+						<a href="index3.html">Dodaj akcesoria</a>
+					</li>
+					<li>
+						<a href="formularze/templates/index.html"></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
 </head>
 
 <body>
-    <h1>Zarządzanie gitarami</h1>
-    <div>
-        <button id="btn">Wczytaj dane z serwera</button>
+<div class="container" data-toggle="collapse" data-target="#bs-navbar">
+            <div id="carousel-example-generic2" class="carousel slide">
+                    <!-- Wskaźniki w postaci kropek -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+                      <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+                    </ol>
+                  
+                    <!-- Slajdy -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img class="img-responsive" src="img/epiphone.jpg" alt="giatara">
+                        <!-- Opis slajdu -->
+                        <div class="carousel-caption">
+                          <h3>Pobieranie gitar z bazy danych</h3>
+                          <p>Kliknij przycisk w odpowiedniej zakładce i sprawdź w konsoli</p>
+                        </div>
+                      </div>
+                  
+                      <div class="item">
+                        <img class="img-responsive" src="img/naglo.jpg" alt="nagłośnienie">
+                        <!-- Opis slajdu -->
+                        <div class="carousel-caption">
+                          <h3>Pobieranie nagłośnienia z bazy danych</h3>
+                          <p>Kliknij przycisk w odpowiedniej zakładce i sprawdź w konsoli</p>
+                        </div>
+                      </div>
+                  
+                      <div class="item">
+                        <img class="img-responsive" src="img/kostki.jpg" alt="kostki do gry">
+                        <!-- Opis slajdu -->
+                        <div class="carousel-caption">
+                          <h3>Dodawanie własnych zasobów</h3>
+                          <p>Wejdź w interesujący Cię formularz i go wypełnij</p>
+                        </div>
+                      </div>
+                  
+                    </div>
+                  
+                    <!-- Strzałki do przewijania -->
+                    <a class="left carousel-control" href="#carousel-example-generic2" data-slide="prev">
+                      <span class="icon-prev"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic2" data-slide="next">
+                      <span class="icon-next"></span>
+                    </a>
+                  </div>
     </div>
+	
 
-    <!-- <script src=".htaccess"></script> -->
-    <script>
-        $('#btn').on('click', function () {
-            const $btn = $(this);
 
-            $.ajax({
-                    url: 'http://localhost:4000/guitars',
-                    dataType: 'json'
-                })
-                .done(function (ret) {
-                    $btn.text('Sprawdź w konsoli debugera');
-                    $btn.prop('disabled', true);
 
-                    ret.guitars.forEach(guitars => {
-                        console.log('%c Gitara ' + guitars.producer + ':', 'font-weight:bold');
-                        console.log(guitars);
-                        console.log('');
-                    })
-                })
-                .fail(function (err) {
-                    console.error(err);
-                })
-                .always(function () {});
-
-        })
-    </script>
 </body>
 
 </html>

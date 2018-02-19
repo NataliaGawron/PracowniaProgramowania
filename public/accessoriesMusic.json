@@ -1,0 +1,21 @@
+{
+	"accessoriesMusic": [{
+		"name": "Kabel instrumentalny jack",
+		"producer": "Dynacord",
+		"model": "AXM 12A",
+		"colour": "black",
+		"price": 41
+	}, {
+		"name": "Kabel instrumentalny jack",
+		"producer": "Alto Professional",
+		"model": "TX12",
+		"colour": "black",
+		"price": 89
+	}, {
+		"name": "Kabel instrumentalny jack",
+		"producer": "Fender FORTIS",
+		"model": "F12BT",
+		"colour": "black",
+		"price": 31
+	}]
+}

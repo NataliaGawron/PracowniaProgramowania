@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js" lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Guitar App - Zarządzaj gitarami</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="Shortcut icon" href="gitara.ico" />
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Lobster|Open+Sans+Condensed:300|Pacifico" rel="stylesheet"/>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans+Condensed:300" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<header class="bs-docs-nav navbar navbar-static-top  navbar-inverse" id="top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button aria-controls="bs-navbar" class="collapsed navbar-toggle" data-target=#bs-navbar data-toggle="collapse" type="button">
+					<span class=sr-only>Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html" class="navbar-brand">Home</a>
+			</div>
+			<nav class="collapse navbar-collapse" id="bs-navbar">
+				<ul class="nav navbar-nav">
+					<li>
+						<a class="active" href="index1.html">Wyświetl gitary</a>
+					</li>
+					<li>
+						<a href="index3.html">Wyświetl nagłośnienie</a>
+					</li>
+					<li>
+						<a href="index2.html">Wyświetl akcesoria</a>
+					</li>
+					<li>
+						<a href="formularze/templates/index.html">Dodaj gitary</a>
+					</li>
+					<li>
+						<a href="formularze/templates/index2.html">Dodaj nagłośnienie</a>
+					</li>
+					<li>
+						<a href="formularze/templates/index3.html">Dodaj akcesoria</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+<body>
+	<div class="container">
+    <h1>Zarządzanie gitarami</h1>
+    <div>
+        <button id="btn">Wczytaj dane z serwera</button>
+    </div>
+
+    <script>
+        $('#btn').on('click', function () {
+            const $btn = $(this);
+
+            $.ajax({
+                    url: 'http://localhost:4000/api/guitars',
+                    dataType: 'json'
+                })
+                .done(function (ret) {
+                    $btn.text('Sprawdź w konsoli debugera');
+                    $btn.prop('disabled', true);
+
+                    ret.forEach(guitars => {
+                        console.log('%c Gitara ' + guitars.producer + ':', 'font-weight:bold');
+                        console.log(guitars);
+                        console.log('');
+                    })
+                })
+                .fail(function (err) {
+                    console.error(err);
+                })
+                .always(function () {});
+
+        })
+    </script>
+	</div>
+</body>
+
+</html>
